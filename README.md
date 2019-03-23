@@ -111,7 +111,6 @@ Files to exclude
 | ------- |:--------------:|:----------- |:----- |
 | | | | |
 | **macOS** | | | |
-
 | `.fseventsd` | Y | macOS File System Events notification mechanism | |
 | `.com.apple.timemachine.donotpresent` | Y | macOS | |
 | `.AppleDouble` | Y | macOS | |
