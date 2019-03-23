@@ -1,4 +1,4 @@
-# Nextcloud hidden files sync configuration for programmers
+# Nextcloud files sync configuration for programmers
 
 ### About
 
@@ -222,5 +222,6 @@ Files to exclude
 
 ### Todo
 
+* Redo all Visual Studio / MSVC stuff
 * Check file patterns for VisualGDB junk files.
 * Suggest rule importing menu in *Nextcloud* client app Settings that can take lists in `LST` (`CSV`/`XML`) format and replace and/or merge it with existing whatever settings. It is not so much about user friendly way to add patterns, it is more about merging patterns. Say your team start using new app/tech that generates files you want to exclude - just generate patterns ignore list and send out to everybody in the workgroup.
