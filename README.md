@@ -50,6 +50,10 @@ Apart from those we should make patterns to leave out also non-hidden files such
 * Build side products
 * OS cache, hidden files
 
+### What should be left, but is not
+
+A good example in case of programming is leaving out `*.obj` file sync. But we cannot, as extension is same as *Wavefront OBJ File* that we want to sync.
+
 ### Built in patterns static
 
 These patterns are *Nextcloud* specific, they are static hardcoded, defined outside `sync-exclude.lst`.
@@ -166,7 +170,7 @@ Files to exclude
 | `*.stTheme.cache` | Y | [Sublime Text cache](https://www.sublimetext.com) | |
 | `*.sublime-workspace` | Y | [Sublime Text cache](https://www.sublimetext.com) | workspace files are user-specific |
 | | | | |
-| **Xcode** | | | |
+| **Xcode, Clang** | | | |
 | `*~.nib` | Y | Xcode | |
 | `*.swp` | Y | Xcode | |
 | `*.out` | Y | Xcode | **Beware, this is aggressive exclude** |
@@ -176,13 +180,16 @@ Files to exclude
 | `*.mode1v3` | Y | Xcode | workspace files are user-specific |
 | `*.mode2v3` | Y | Xcode | workspace files are user-specific |
 | `*.user` | Y | Xcode | workspace files are user-specific |
-| `xcuserdata/` | Y | Xcode | workspace files are user-specific |
-| `*.xcworkspace` | Y | Xcode | workspace files are user-specific |
+| `xcuserdata/` | Y | Xcode | exclude `xcuserdata` |
+| `*.xcworkspace` | Y | Xcode | keep out for now |
 | `*.xccheckout` | Y | Xcode | workspace files are user-specific |
-| | | | |
-| **Code::Blocks** | | | |
-| `*.depend` | Y | Code::Blocks | |
-| `*.layout` | Y | Code::Blocks | workspace files are user-specific |
+| `*.buld/` | Y | Xcode | |
+| `*.hmap` | Y | Clang header map | |
+| `dgph` | Y | dependency graph information | |
+| `*.d` | Y | header dependencies | |
+| `*.dia` | Y | serialized diagnostics blob | |
+| `*.LinkFileList` | Y | what it says | |
+| `*_dependency_info.dat` | Y | contains all libs, frameworks that are linked | |
 | | | | |
 | **Visual Studio, MSVC** | | | |
 | `*.sdf` | Y | Visual Studio | |
@@ -192,13 +199,18 @@ Files to exclude
 | `*.ilk` | Y | Visual Studio | |
 | `*.aps` | Y | Visual Studio | |
 | `*.ncb` | Y | Visual Studio | |
-| `ipch/` | | Visual Studio | |
+| `ipch/` | Y | Visual Studio | |
 | `*.tlog/` | Y | Visual Studio | |
 | `*.tlog` | Y | Visual Studio | |
 | `*.lastbuildstate` | Y | Visual Studio | |
+| `*.idb` | Y | MSVC++ | |
 | | | | |
 | **Visual Code** | | | |
 | `.history` | Y | Visual Code local history of files | |
+| | | | |
+| **Code::Blocks** | | | |
+| `*.depend` | Y | Code::Blocks | |
+| `*.layout` | Y | Code::Blocks | workspace files are user-specific |
 | | | | |
 | **Eclipse** | | | |
 | `.metadata` | Y | Eclipse | |

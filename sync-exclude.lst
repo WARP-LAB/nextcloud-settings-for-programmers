@@ -91,9 +91,13 @@ vendor/
 ]xcuserdata/
 ]*.xcworkspace
 ]*.xccheckout
-
-]*.depend
-]*.layout
+]*.build/
+]*.hmap
+]dgph
+]*.d
+]*.dia
+]*.LinkFileList
+]*_dependency_info.dat
 
 ]*.sdf
 ]*.opensdf
@@ -102,12 +106,16 @@ vendor/
 ]*.ilk
 ]*.aps
 ]*.ncb
-ipch/
+]ipch/
 ]*.tlog/
 ]*.tlog
 ]*.lastbuildstate
+]*.idb
 
 ].history
+
+]*.depend
+]*.layout
 
 ].metadata
 ]local.properties
