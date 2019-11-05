@@ -9,9 +9,8 @@
 ._*
 ]Thumbs.db
 System Volume Information
-desktop.ini
 .*.sw?
-.*.*.sw?
+.*.*sw?
 ].TemporaryItems
 ].Trashes
 ].DocumentRevisions-V100
@@ -23,15 +22,19 @@ desktop.ini
 *.filepart
 *.crdownload
 *.kate-swp
-*.gnucach.tmp-*
+*.gnucash.tmp-*
 .synkron.*
 .sync.ffs_db
 .symform
 .symform-store
-.fuse-hidden*
+.fuse_hidden*
 *.unison
 .nfs*
 My Saved Places.
+
+desktop.ini
+.*.*.sw?
+*.nfs
 
 ].fseventsd
 ].com.apple.timemachine.donotpresent

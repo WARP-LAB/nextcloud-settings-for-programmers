@@ -20,7 +20,7 @@ To install:
 
 * Quit *Nextcloud*
 * Place `sync-exclude.lst` in correct location
-	* macOS `~/Library/Application\ Support/Nextcloud/sync-exclude.lst`
+	* macOS `~/Library/Preferences/Nextcloud/sync-exclude.lst` or (for older versions) `~/Library/Application\ Support/Nextcloud/sync-exclude.lst`
 	* MSW10 `%AppData%\Nextcloud\sync-exclude.lst` or `%LocalAppData%\Nextcloud\sync-exclude.lst`
 * Run *Nextcloud* client
 * Pause synchronisation
@@ -66,10 +66,11 @@ These patterns are *Nextcloud* specific, they are static hardcoded, defined outs
 
 ### Built in patterns
 
-These patterns are or at some point were set *out of box*. This list is a merger.
+These patterns are or at some point were set *out of box*. This list is a merger. Patterns in bold are those which come OOB in latest Nextcloud client version 2.6.0.
 
 | Pattern | Allow deletion | Description | Notes |
 | ------- |:--------------:|:----------- |:----- |
+| **Currently 2.6.0** | | | |
 | `*~`      | | BSD/nix | |
 | `~$*`      | | | |
 | `.~lock.*` | | file locking | |
@@ -81,16 +82,14 @@ These patterns are or at some point were set *out of box*. This list is a merger
 | `._*` | | file information, thumbnails for HFS+/Unix/UFS | |
 | `Thumbs.db` | Y | image file caches, MSW | |
 | `System Volume Information` | Y | NTFS related, MSW | |
-| `desktop.ini` | | folder config file, MSW | |
 | `.*.sw?` | | | |
-| `.*.*.sw?` | | | |
+| `.*.*sw?` | | | |
 | `.TemporaryItems` | Y | temporary storage, macOS | |
 | `.Trashes` | Y | trash temporary, macOS| |
 | `.DocumentRevisions-V100` | Y | internal version control, macOS | |
 | `.Trash-*` | Y | Linux trash folder, nix | |
 | `.fseventd` | | filesystem events log, macOS | |
 | `.apdisk` | | directories on remote AFP shares, created by macOS | |
-| `.htaccess` | | [Apache configuration files](https://httpd.apache.org/docs/current/howto/htaccess.html) | this should be synced |
 | `.directory` | | KDE directory preferences, nix | |
 | `*.part` | | partial downloads | |
 | `*.filepart` | | partial downloads | |
@@ -103,9 +102,14 @@ These patterns are or at some point were set *out of box*. This list is a merger
 | `*.symform-store` | | [Symform files](http://symform.com) | |
 | `*.fuse-hidden*` | | FUSE mount leftovers | |
 | `*.unison` | | [Unison locks](https://www.cis.upenn.edu/~bcpierce/unison/) | |
-| `*.nfs` | | NFS mounting leftovers | |
+| `*.nfs*` | | NFS mounting leftovers | |
 | `My Saved Places.` | | Your Saved Places. | |
-
+| **In previous versions (that should be excluded)** | | | |
+| `desktop.ini` | | folder config file, MSW | |
+| `.*.*.sw?` | | | |
+| `*.nfs` | | NFS mounting leftovers | |
+| **In previous versions (that should be synced)** | | | |
+| `.htaccess` | | [Apache configuration files](https://httpd.apache.org/docs/current/howto/htaccess.html) | this should be synced |
 
 ### Custom patterns
 
@@ -131,7 +135,7 @@ Files to exclude
 | `ehthumbs.db` | Y | image file caches, MSW | |
 | `ehthumbs_vista.db` | Y | image file caches, MSW | |
 | `*.stackdump` | Y | image file caches, MSW | |
-| `Desktop.ini` | Y | folder config file, MSW | Capitilised duplicate for built in pattern |
+| `Desktop.ini` | Y | folder config file, MSW | Capitalised duplicate for built in pattern |
 | `$RECYCLE.BIN/` | Y | Recycle Bin used on file shares, MSW | |
 | `*.lnk` | Y | alias, MSW | |
 | | | | |
@@ -187,7 +191,7 @@ Files to exclude
 | `*.hmap` | Y | Clang header map | |
 | `dgph` | Y | dependency graph information | |
 | `*.d` | Y | header dependencies | |
-| `*.dia` | Y | serialized diagnostics blob | |
+| `*.dia` | Y | serialised diagnostics blob | |
 | `*.LinkFileList` | Y | what it says | |
 | `*_dependency_info.dat` | Y | contains all libs, frameworks that are linked | |
 | | | | |
