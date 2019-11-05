@@ -66,7 +66,7 @@ These patterns are *Nextcloud* specific, they are static hardcoded, defined outs
 
 ### Built in patterns
 
-These patterns are or at some point were set *out of box*. This list is a merger. Patterns in bold are those which come OOB in latest Nextcloud client version 2.6.0.
+These patterns are or at some point were set *out of box*. This list is a merger.
 
 | Pattern | Allow deletion | Description | Notes |
 | ------- |:--------------:|:----------- |:----- |
