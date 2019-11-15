@@ -4,8 +4,8 @@
 
 By default Nextcloud
 
-* Does not sync hidden files (files having `.*` naming pattern) which are critical for coding projects as not everything is `git` pushed to some upstream.
-* Synchronises unneeded large files that should be left out as they can be recreated on each machine instantly
+* Does not sync hidden files (files having `.*` naming pattern) which are critical for coding projects.
+* Synchronises unneeded large files that should be left out as they can be recreated on each machine instantly (`node_modules`, C/C++ compilation intermediate products, a.o.)
 * Synchronises unneeded IDE caching, layout, logging etc. files.
 
 This list tries to list all files that could/should be excluded when `Synch hidden files` option is turned on and offers a settings file that can be supplied to Nextcloud.
