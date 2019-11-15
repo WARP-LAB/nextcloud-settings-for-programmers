@@ -4,7 +4,7 @@
 
 By default Nextcloud
 
-* Does not sync hidden files which are critical for coding projects as not everything is `git` pushed to some upstream.
+* Does not sync hidden files (files having `.*` naming pattern) which are critical for coding projects as not everything is `git` pushed to some upstream.
 * Synchronises unneeded large files that should be left out as they can be recreated on each machine instantly
 * Synchronises unneeded IDE caching, layout, logging etc. files.
 
@@ -66,7 +66,7 @@ These patterns are *Nextcloud* specific, they are static hardcoded, defined outs
 
 ### Built in patterns
 
-These patterns are or at some point were set *out of box*. This list is a merger.
+These patterns are or at some point were set *out of box*. Meaning that a clean install of Nextcloud would put `sync-exclude.lst` in locations mentioned above and the file would have these patterns specified in it. This list is a merger.
 
 | Pattern | Allow deletion | Description | Notes |
 | ------- |:--------------:|:----------- |:----- |
