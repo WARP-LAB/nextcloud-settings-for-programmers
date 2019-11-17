@@ -70,7 +70,7 @@ These patterns are or at some point were set *out of box*. Meaning that a clean 
 
 | Pattern | Allow deletion | Description | Notes |
 | ------- |:--------------:|:----------- |:----- |
-| **Currently 2.6.0** | | | |
+| **Currently 2.6.1** | | | |
 | `*~`      | | BSD/nix | |
 | `~$*`      | | | |
 | `.~lock.*` | | file locking | |
@@ -81,7 +81,7 @@ These patterns are or at some point were set *out of box*. Meaning that a clean 
 | `.ds_store` | Y | [dir attributes, macOS](https://en.wikipedia.org/wiki/.DS_Store) | |
 | `._*` | | file information, thumbnails for HFS+/Unix/UFS | |
 | `Thumbs.db` | Y | image file caches, MSW | |
-| `System Volume Information` | Y | NTFS related, MSW | |
+| `System Volume Information` | | NTFS related, MSW | |
 | `.*.sw?` | | | |
 | `.*.*sw?` | | | |
 | `.TemporaryItems` | Y | temporary storage, macOS | |
@@ -104,6 +104,7 @@ These patterns are or at some point were set *out of box*. Meaning that a clean 
 | `*.unison` | | [Unison locks](https://www.cis.upenn.edu/~bcpierce/unison/) | |
 | `*.nfs*` | | NFS mounting leftovers | |
 | `My Saved Places.` | | Your Saved Places. | |
+| `\#*#` | | emacs recovery files | |
 | **In previous versions (that should be excluded)** | | | |
 | `desktop.ini` | | folder config file, MSW | |
 | `.*.*.sw?` | | | |
