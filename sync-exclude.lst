@@ -1,3 +1,6 @@
+# ################################
+# v2.6.1 OOB exlude patterns
+
 *~
 ~$*
 .~lock.*
@@ -31,10 +34,22 @@ System Volume Information
 *.unison
 .nfs*
 My Saved Places.
+\#*#
+
+# ################################
+# Historical Nextcloud client OOB patterns that should be excluded
 
 desktop.ini
 .*.*.sw?
 *.nfs
+
+# ################################
+# Historical OOB patterns that should be included (commented out for reference)
+
+# .htaccess
+
+# ################################
+# Custom patterns
 
 ].fseventsd
 ].com.apple.timemachine.donotpresent
