@@ -1,5 +1,5 @@
 # ################################
-# v2.6.1 OOB exlude patterns
+# v2.6.4 OOB exlude patterns
 
 *~
 ~$*
@@ -12,20 +12,26 @@
 ._*
 ]Thumbs.db
 System Volume Information
+
 .*.sw?
 .*.*sw?
+
 ].TemporaryItems
 ].Trashes
 ].DocumentRevisions-V100
 ].Trash-*
 .fseventd
 .apdisk
+
 .directory
+
 *.part
 *.filepart
 *.crdownload
+
 *.kate-swp
 *.gnucash.tmp-*
+
 .synkron.*
 .sync.ffs_db
 .symform
@@ -33,7 +39,9 @@ System Volume Information
 .fuse_hidden*
 *.unison
 .nfs*
+
 My Saved Places.
+
 \#*#
 
 # ################################
