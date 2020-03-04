@@ -22,7 +22,7 @@ To install:
 * Place `sync-exclude.lst` in correct location
 	* macOS `~/Library/Preferences/Nextcloud/sync-exclude.lst` or (for older versions) `~/Library/Application\ Support/Nextcloud/sync-exclude.lst`
 	* MSW10 `%AppData%\Nextcloud\sync-exclude.lst` or `%LocalAppData%\Nextcloud\sync-exclude.lst`
-	* File may not exist in path after fresh install. Within Nextcloud *Settings* under *General* tab click *Edit Ignored files* to bring up modal - click *Restore Defaults*, it should create file and fill it with *Built in patterns patterns* discussed below.
+	* File may not exist in path after fresh install. Within Nextcloud *Settings* under *General* tab click *Edit Ignored files* to bring up modal - click *Restore Defaults*, it should create file and fill it with *Built in patterns* discussed below.
 * Run *Nextcloud* client
 * Pause synchronisation
 * Within *Settings* under *General* tab click *Edit Ignored files* to bring up modal
