@@ -67,11 +67,11 @@ These patterns are *Nextcloud* specific, they are static hardcoded, defined outs
 
 ### Built in patterns
 
-These patterns are or at some point were set *out of box*. Meaning that a clean install of Nextcloud would put `sync-exclude.lst` in locations mentioned above and the file would have these patterns specified in it. This list is a merger.
+These patterns are set *out of box*. Meaning that a clean install of Nextcloud would put `sync-exclude.lst` in locations mentioned above and the file would have these patterns specified in it.
 
 | Pattern | Allow deletion | Description | Notes |
 | ------- |:--------------:|:----------- |:----- |
-| **Currently 2.6.4** | | | |
+| **Currently 3.0.1** | | | |
 | `*~`      | | BSD/nix | |
 | `~$*`      | | | |
 | `.~lock.*` | | file locking | |
@@ -82,6 +82,7 @@ These patterns are or at some point were set *out of box*. Meaning that a clean 
 | `.ds_store` | Y | [dir attributes, macOS](https://en.wikipedia.org/wiki/.DS_Store) | |
 | `._*` | | file information, thumbnails for HFS+/Unix/UFS | |
 | `Thumbs.db` | Y | image file caches, MSW | |
+| `photothumb.db` | Y | thumbnails by PhotoScape | |
 | `System Volume Information` | | NTFS related, MSW | |
 | `.*.sw?` | | | |
 | `.*.*sw?` | | | |
@@ -106,6 +107,13 @@ These patterns are or at some point were set *out of box*. Meaning that a clean 
 | `*.nfs*` | | NFS mounting leftovers | |
 | `My Saved Places.` | | Your Saved Places. | |
 | `\#*#` | | emacs recovery files | |
+
+### Built in patterns (historic)
+
+These patterns at some point were set *out of box*. They are reasonable and should be kept.
+
+| Pattern | Allow deletion | Description | Notes |
+| ------- |:--------------:|:----------- |:----- |
 | **In previous versions (that should be excluded)** | | | |
 | `desktop.ini` | | folder config file, MSW | |
 | `.*.*.sw?` | | | |

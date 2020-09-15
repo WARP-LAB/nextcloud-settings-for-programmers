@@ -1,5 +1,5 @@
 # ################################
-# v2.6.4 OOB exlude patterns
+# v3.0.1 OOB exlude patterns
 
 *~
 ~$*
@@ -11,6 +11,7 @@
 ].ds_store
 ._*
 ]Thumbs.db
+]photothumb.db
 System Volume Information
 
 .*.sw?
