@@ -1,6 +1,6 @@
 # Nextcloud files sync configuration for programmers
 
-### About
+## About
 
 By default Nextcloud
 
@@ -10,7 +10,7 @@ By default Nextcloud
 
 This list tries to list all files that could/should be excluded when `Synch hidden files` option is turned on and offers a settings file that can be supplied to Nextcloud.
 
-### Install custom patterns
+## Install custom patterns
 
 See `sync-exclude.lst` contained in repo.
 
@@ -20,9 +20,9 @@ To install:
 
 * Quit *Nextcloud*
 * Place `sync-exclude.lst` in correct location
-	* macOS `~/Library/Preferences/Nextcloud/sync-exclude.lst` or (for older versions) `~/Library/Application\ Support/Nextcloud/sync-exclude.lst`
-	* MSW10 `%AppData%\Nextcloud\sync-exclude.lst` or `%LocalAppData%\Nextcloud\sync-exclude.lst`
-	* File may not exist in path after fresh install. Within Nextcloud *Settings* under *General* tab click *Edit Ignored files* to bring up modal - click *Restore Defaults*, it should create file and fill it with *Built in patterns* discussed below.
+  * macOS `~/Library/Preferences/Nextcloud/sync-exclude.lst` or (for older versions) `~/Library/Application\ Support/Nextcloud/sync-exclude.lst`
+  * MSW10 `%AppData%\Nextcloud\sync-exclude.lst` or `%LocalAppData%\Nextcloud\sync-exclude.lst`
+  * File may not exist in path after fresh install. Within Nextcloud *Settings* under *General* tab click *Edit Ignored files* to bring up modal - click *Restore Defaults*, it should create file and fill it with *Built in patterns* discussed below.
 * Run *Nextcloud* client
 * Pause synchronisation
 * Within *Settings* under *General* tab click *Edit Ignored files* to bring up modal
@@ -31,17 +31,17 @@ To install:
 * Press OK
 * Unpause synchronisation (or yet better, restart *Nextcloud* client once more)
 
-### What to include
+## What to include
 
 By allowing syncing of hidden files, we will sync
 
 * Git - `.git` directories and all `.git*` conf files
 * Web development stuff such as `.atomignore`, `.babelrc`, `.env`, `.eslintignore*`, `.eslintrc*`, `.rsyncexclude`, `.stylelintrc*` a.o.
 
-### What to leave out?
+## What to leave out
 
 By allowing syncing of hidden files there are lots of hidden files that should be excluded anyways.  
-Apart from those we should make patterns to leave out also non-hidden files such as 
+Apart from those we should make patterns to leave out also non-hidden files such as
 
 * IDEs caches: Development on *Visual Code*, *Atom*, *Sublime*
 * IDEs caches: C/C++/ObjC++ desktop and handheld development on *Xcode*, *Code::Blocks*, *Visual Studio*
@@ -51,11 +51,11 @@ Apart from those we should make patterns to leave out also non-hidden files such
 * Build side products
 * OS cache, hidden files
 
-### What should be left, but is not
+## What should be left, but is not
 
 A good example in case of programming is leaving out `*.obj` file sync. But we cannot, as extension is same as *Wavefront OBJ File* that we want to sync.
 
-### Built in patterns static
+## Exclude - Built in patterns (static hardcoded)
 
 These patterns are *Nextcloud* specific, they are static hardcoded, defined outside `sync-exclude.lst`.
 
@@ -65,7 +65,7 @@ These patterns are *Nextcloud* specific, they are static hardcoded, defined outs
 | `._sync_*.db*`      | | | |
 | `.sync_*.db*`      | | | |
 
-### Built in patterns
+## Exclude - Built in patterns
 
 These patterns are set *out of box*. Meaning that a clean install of Nextcloud would put `sync-exclude.lst` in locations mentioned above and the file would have these patterns specified in it.
 
@@ -108,7 +108,7 @@ These patterns are set *out of box*. Meaning that a clean install of Nextcloud w
 | `My Saved Places.` | | Your Saved Places. | |
 | `\#*#` | | emacs recovery files | |
 
-### Built in patterns (historic)
+## Exclude - Built in patterns (historic)
 
 These patterns at some point were set *out of box*. They are reasonable and should be kept.
 
@@ -118,12 +118,8 @@ These patterns at some point were set *out of box*. They are reasonable and shou
 | `desktop.ini` | | folder config file, MSW | |
 | `.*.*.sw?` | | | |
 | `*.nfs` | | NFS mounting leftovers | |
-| **In previous versions (that should be synced)** | | | |
-| `.htaccess` | | [Apache configuration files](https://httpd.apache.org/docs/current/howto/htaccess.html) | this should be synced |
 
-### Custom patterns
-
-Files to exclude
+## Exclude - Custom patterns
 
 | Pattern | Allow deletion | Description | Notes |
 | ------- |:--------------:|:----------- |:----- |
@@ -163,7 +159,7 @@ Files to exclude
 | `.lock-wscript` | Y | node-waf configuration | |
 | | | | |
 | **Bower** | | | |
-| `bower_components/` | Y | [Bower components dir](https://bower.io) | ` bower.json` is synced, just do `bower install` |
+| `bower_components/` | Y | [Bower components dir](https://bower.io) | `bower.json` is synced, just do `bower install` |
 | `.bower-cache` | Y | [Bower junk](https://bower.io) | |
 | `.bower-registry` | Y | [Bower junk](https://bower.io) | |
 | `.bower-tmp` | Y | [Bower junk](https://bower.io) | |
@@ -209,7 +205,7 @@ Files to exclude
 | `*.sdf` | Y | Visual Studio | |
 | `*.opensdf` | Y | Visual Studio | |
 | `*.suo` | Y | Visual Studio | |
-| `*.pdb` | Y | Visual Studio | |
+| `*.pdb` | Y | Visual Studio | **Beware, same as Protein Data Bank file** |
 | `*.ilk` | Y | Visual Studio | |
 | `*.aps` | Y | Visual Studio | |
 | `*.ncb` | Y | Visual Studio | |
@@ -246,7 +242,23 @@ Files to exclude
 | `*.cpp.elf` | | | **Beware, this is aggressive exclude** |
 | `*.cpp.hex` | | | **Beware, this is aggressive exclude** |
 
-### Todo
+## Do not exclude
+
+| Pattern | Allow deletion | Description | Notes |
+| ------- |:--------------:|:----------- |:----- |
+| `.htaccess` | | [Apache configuration files](https://httpd.apache.org/docs/current/howto/htaccess.html) | When Nextcloud is run by Nginx (or even in the case of Apache if `datadirectory` is outside webroot) it is safe to allow syncing `.htaccess`. [*1] |
+
+[*1]  
+Remeber to remove `'.htaccess'` in Nextcloud's `config.php` from blacklist
+
+```php
+  // default implicit
+  // 'blacklisted_files' => ['.htaccess'],
+  // by setting empty array .htaccess is allowed
+  'blacklisted_files' => [],
+```
+
+## Todo
 
 * Redo all Visual Studio / MSVC stuff
 * Check file patterns for VisualGDB junk files.
