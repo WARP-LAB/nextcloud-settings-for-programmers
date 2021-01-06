@@ -151,6 +151,13 @@ These patterns at some point were set *out of box*. They are reasonable and shou
 | **ANDROID** | | | |
 | `.csettings` | Y | Android | |
 | | | | |
+| **Browser download partials** | | | |
+| `.crdownload` | | Chrome and Edge | included in OOB patterns |
+| `.part` | | Firefox | included in OOB patterns |
+| `.opdownload` | | Opera | |
+| `.partial` | | Internet Explorer 11 | |
+| `.download` | | Safari | |
+| | | | |
 | **Node.js/NPM** | | | |
 | `node_modules/`| Y | [dir for NPM](https://www.npmjs.com) | huge stuff, `package.josn` is synced, just do `npm i` |
 | `.npm`| Y | NPM cache directory ||

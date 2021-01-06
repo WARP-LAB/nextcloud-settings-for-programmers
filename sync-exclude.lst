@@ -83,6 +83,12 @@ Temporary Items/
 
 ].csettings
 
+# *.crdownload
+# *.part
+*.opdownload
+*.partial
+*.download
+
 ]node_modules/
 ].npm
 ].node_repl_history
