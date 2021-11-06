@@ -71,7 +71,7 @@ These patterns are set *out of box*. Meaning that a clean install of Nextcloud w
 
 | Pattern | Allow deletion | Description | Notes |
 | ------- |:--------------:|:----------- |:----- |
-| **Currently 3.1.1** | | | |
+| **Currently 3.3.6** | | | |
 | `*~`      | | BSD/nix | |
 | `~$*`      | | | |
 | `.~lock.*` | | file locking | |
