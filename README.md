@@ -40,7 +40,7 @@ By allowing syncing of hidden files, we will sync
 
 ## What to leave out
 
-By allowing syncing of hidden files there are lots of hidden files that should be excluded anyways.  
+By allowing syncing of hidden files there are lots of hidden files that should be excluded anyways.
 Apart from those we should make patterns to leave out also non-hidden files such as
 
 * IDEs caches: Development on *Visual Code*, *Atom*, *Sublime*
@@ -71,7 +71,7 @@ These patterns are set *out of box*. Meaning that a clean install of Nextcloud w
 
 | Pattern | Allow deletion | Description | Notes |
 | ------- |:--------------:|:----------- |:----- |
-| **Currently 3.3.6** | | | |
+| **Current version** | | | |
 | `*~`      | | BSD/nix | |
 | `~$*`      | | | |
 | `.~lock.*` | | file locking | |
@@ -92,6 +92,7 @@ These patterns are set *out of box*. Meaning that a clean install of Nextcloud w
 | `.Trash-*` | Y | Linux trash folder, nix | |
 | `.fseventd` | | filesystem events log, macOS | |
 | `.apdisk` | | directories on remote AFP shares, created by macOS | |
+| `.Spotlight-V100` | | macOS Spotlight index data | |
 | `.directory` | | KDE directory preferences, nix | |
 | `*.part` | | partial downloads | |
 | `*.filepart` | | partial downloads | |
@@ -129,7 +130,6 @@ These patterns at some point were set *out of box*. They are reasonable and shou
 | `.com.apple.timemachine.donotpresent` | Y | macOS | |
 | `.AppleDouble` | Y | macOS | |
 | `.LSOverride` | Y | macOS | |
-| `.Spotlight-V100` | Y | macOS Spotlight index data | |
 | `.VolumeIcon.icns` | Y | icons, macOS | |
 | `.AppleDB` | Y | directories on remote AFP shares, created by macOS | |
 | `.AppleDesktop` | Y | directories on remote AFP shares, created by macOS | |
@@ -255,7 +255,7 @@ These patterns at some point were set *out of box*. They are reasonable and shou
 | ------- |:--------------:|:----------- |:----- |
 | `.htaccess` | | [Apache configuration files](https://httpd.apache.org/docs/current/howto/htaccess.html) | When Nextcloud is run by Nginx (or even in the case of Apache if `datadirectory` is outside webroot) it is safe to allow syncing `.htaccess`. [*1] |
 
-[*1]  
+[*1]
 Remeber to remove `'.htaccess'` in Nextcloud's `config.php` from blacklist
 
 ```php

@@ -1,5 +1,5 @@
 # ################################
-# v3.3.6 OOB exlude patterns
+# v3.4.1 OOB exlude patterns
 
 *~
 ~$*
@@ -23,6 +23,8 @@ System Volume Information
 ].Trash-*
 .fseventd
 .apdisk
+
+.Spotlight-V100
 
 .directory
 
@@ -64,7 +66,6 @@ desktop.ini
 ].com.apple.timemachine.donotpresent
 ].AppleDouble
 ].LSOverride
-].Spotlight-V100
 ].VolumeIcon.icns
 ].AppleDB
 ].AppleDesktop
