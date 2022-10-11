@@ -1,5 +1,5 @@
 # ################################
-# v3.4.1 OOB exlude patterns
+# v3.6.0 OOB exlude patterns
 
 *~
 ~$*
@@ -9,6 +9,7 @@
 ]Icon\r*
 ].DS_Store
 ].ds_store
+*.textClipping
 ._*
 ]Thumbs.db
 ]photothumb.db
@@ -46,6 +47,8 @@ System Volume Information
 My Saved Places.
 
 \#*#
+
+*.sb-*
 
 # ################################
 # Historical Nextcloud client OOB patterns that should be excluded

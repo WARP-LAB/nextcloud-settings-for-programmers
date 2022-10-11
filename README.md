@@ -80,6 +80,7 @@ These patterns are set *out of box*. Meaning that a clean install of Nextcloud w
 | `Icon\r*` | Y | [icon folder, macOS](http://apple.stackexchange.com/a/31877) | |
 | `.DS_Store` | Y | [dir attributes, macOS](https://en.wikipedia.org/wiki/.DS_Store) | |
 | `.ds_store` | Y | [dir attributes, macOS](https://en.wikipedia.org/wiki/.DS_Store) | |
+| `*.textClipping` | | text clipping, macOS | |
 | `._*` | | file information, thumbnails for HFS+/Unix/UFS | |
 | `Thumbs.db` | Y | image file caches, MSW | |
 | `photothumb.db` | Y | thumbnails by PhotoScape | |
@@ -108,6 +109,7 @@ These patterns are set *out of box*. Meaning that a clean install of Nextcloud w
 | `*.nfs*` | | NFS mounting leftovers | |
 | `My Saved Places.` | | Your Saved Places. | |
 | `\#*#` | | emacs recovery files | |
+| `*.sb-*` | | | |
 
 ## Exclude - Built in patterns (historic)
 
