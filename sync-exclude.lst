@@ -1,5 +1,5 @@
 # ################################
-# v3.8.2 OOB exlude patterns
+# v3.13.0 OOB exlude patterns
 
 *~
 ~$*
@@ -43,6 +43,10 @@ System Volume Information
 .fuse_hidden*
 *.unison
 .nfs*
+
+.stfolder
+.stignore
+.stversions
 
 My Saved Places.
 

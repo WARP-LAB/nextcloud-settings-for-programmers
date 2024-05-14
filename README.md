@@ -106,7 +106,10 @@ These patterns are set *out of box*. Meaning that a clean install of Nextcloud w
 | `*.symform-store` | | [Symform files](http://symform.com) | |
 | `*.fuse-hidden*` | | FUSE mount leftovers | |
 | `*.unison` | | [Unison locks](https://www.cis.upenn.edu/~bcpierce/unison/) | |
-| `*.nfs*` | | NFS mounting leftovers | |
+| `*.nfs` | | NFS mounting leftovers | |
+| `.stfolder` | | [Syncthing marking](https://docs.syncthing.net/users/faq.html#how-do-i-serve-a-folder-from-a-read-only-filesystem) | |
+| `.stignore` | | Syncthing ignores | |
+| `.stversions` | | Syncthing versioning | |
 | `My Saved Places.` | | Your Saved Places. | |
 | `\#*#` | | emacs recovery files | |
 | `*.sb-*` | | | |
