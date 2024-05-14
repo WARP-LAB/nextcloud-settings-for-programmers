@@ -226,6 +226,10 @@ These patterns at some point were set *out of box*. They are reasonable and shou
 | | | | |
 | **Visual Code** | | | |
 | `.history` | Y | Visual Code local history of files | |
+| **Platform.io** | | | |
+| `.pio/` | Y | | |
+| `.pioenvs/` | Y | | |
+| `.piolibdeps/` | Y | | |
 | | | | |
 | **Code::Blocks** | | | |
 | `*.depend` | Y | Code::Blocks | |

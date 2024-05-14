@@ -151,6 +151,10 @@ vendor/
 
 ].history
 
+].pio/
+].pioenvs/
+].piolibdeps/
+
 ]*.depend
 ]*.layout
 
