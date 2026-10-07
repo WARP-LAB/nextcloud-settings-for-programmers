@@ -80,6 +80,11 @@ These patterns are set *out of box*. Meaning that a clean install of Nextcloud w
 | `~$*`      | | | |
 | `.~lock.*` | | file locking | |
 | `~*.tmp` | | temporary files | |
+| `*.idlk` | | InDesign Lock | |
+| `*.prlock` | | Premiere Lock | |
+| `*.dwl` | | AutoCAD Lock | |
+| `*.dwl2` | | AutoCAD Lock | |
+| `*~lock~` | | | |
 | `*.~*` | Y | temporary files | |
 | `Icon\r*` | Y | [icon folder, macOS](http://apple.stackexchange.com/a/31877) | |
 | `.DS_Store` | Y | [dir attributes, macOS](https://en.wikipedia.org/wiki/.DS_Store) | |
@@ -115,7 +120,6 @@ These patterns are set *out of box*. Meaning that a clean install of Nextcloud w
 | `.stignore` | | Syncthing ignores | |
 | `.stversions` | | Syncthing versioning | |
 | `My Saved Places.` | | Your Saved Places. | |
-| `\#*#` | | emacs recovery files | |
 | `*.sb-*` | | | |
 
 ## Exclude - Built in patterns (historic)
@@ -125,6 +129,7 @@ These patterns at some point were set *out of box*. They are reasonable and shou
 | Pattern | Allow deletion | Description | Notes |
 | ------- |:--------------:|:----------- |:----- |
 | **In previous versions (that should be excluded)** | | | |
+| `\#*#` | | emacs recovery files | |
 | `desktop.ini` | | folder config file, MSW | |
 | `.*.*.sw?` | | | |
 | `*.nfs` | | NFS mounting leftovers | |
