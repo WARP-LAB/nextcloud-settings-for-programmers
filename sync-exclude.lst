@@ -1,10 +1,15 @@
 # ################################
-# v3.13.0 OOB exlude patterns
+# v34.0.5 OOB exlude patterns
 
 *~
 ~$*
 .~lock.*
 ~*.tmp
+*.idlk
+*.prlock
+*.dwl
+*.dwl2
+*~lock~
 ]*.~*
 ]Icon\r*
 ].DS_Store
@@ -50,13 +55,12 @@ System Volume Information
 
 My Saved Places.
 
-\#*#
-
 *.sb-*
 
 # ################################
 # Historical Nextcloud client OOB patterns that should be excluded
 
+\#*#
 desktop.ini
 .*.*.sw?
 *.nfs
